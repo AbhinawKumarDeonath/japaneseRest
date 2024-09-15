@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP ScrollTrigger Timeline</title>
+  <style>
+    body {
+      height: 200vh; /* Make the page tall enough to scroll */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box"></div>
+
+<!-- GSAP and ScrollTrigger CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Create a timeline
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".box", // Element that triggers the animation
+      start: "top 80%", // When the top of the box hits 80% of the viewport height
+      end: "top 30%", // When the top of the box hits 30% of the viewport height
+      scrub: true, // Smoothly animates on scroll
+      markers: true // Enable markers for easier debugging
+    }
+  });
+
+  // Add animations to the timeline
+  tl.to(".box", { x: 300, duration: 1 })
+    .to(".box", { rotation: 360, duration: 1 })
+    .to(".box", { scale: 1.5, duration: 1 });
+</script>
+
+</body>
+</html>
