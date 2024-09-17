@@ -31,6 +31,9 @@ mm.add("(min-width: 800px)", () => {
         right:"69%",
         width:"13%"
     })
+
+
+
 });
 
 mm.add("(max-width: 769px)", () => {
