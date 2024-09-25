@@ -65,6 +65,7 @@ img.logo-img {
     top: 30%;
     right: 20%;
     position: absolute;
+    opacity: 1;
 }
 
 /* .hero-right > img
@@ -164,6 +165,7 @@ img.logo-img {
     top:156%;
     right: 20vw;
     width: 13vw;
+    opacity: 0;
     transition: cubic-bezier(.17,.67,.83,.67);
 
 }
