@@ -9,6 +9,16 @@ text_anim.from(" .h1-name",{
     opacity:"0",
     stagger:"0.3"
 })
+var bowl_anim = gsap.timeline({
+    ease: "Power1.easeInOut"
+})
+
+bowl_anim.from(" .bowl_animation",{
+    duration:1,
+    y:"-50%",
+    opacity:"0",
+    stagger:"0.3"
+})
 var img_anim = gsap.timeline({scrollTrigger:{
 
     trigger:".top-picks-container",
@@ -29,7 +39,7 @@ var about_text_anim = gsap.timeline({scrollTrigger:{
 
     trigger:".about-section",
     start:"30% 50%",
-    end:"50% 50%",
+    end:"80% 80%",
     scrub:true,
     // markers:true,
 
@@ -38,6 +48,23 @@ var about_text_anim = gsap.timeline({scrollTrigger:{
 about_text_anim.from(" .about-text",{
     duration:1,
     y:"50%",
+    opacity:"0",
+    stagger:"0.5",
+    ease:"powerInOut"
+})
+var cook_animation = gsap.timeline({scrollTrigger:{
+
+    trigger:".about-section",
+    start:"30% 50%",
+    end:"80% 80%",
+    scrub:true,
+    // markers:true,
+
+}})
+
+cook_animation.from(" .cook-animation",{
+    duration:1,
+    x:"-50%",
     opacity:"0",
     stagger:"0.5",
     ease:"powerInOut"

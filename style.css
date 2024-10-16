@@ -63,6 +63,7 @@ img.logo-img {
     
     width:30%;
     top: 23%;
+    z-index: 100;
     right: 20%;
     position: absolute;
     opacity: 1;
@@ -166,6 +167,7 @@ img.logo-img {
     right: 20vw;
     width: 13vw;
     opacity: 0;
+    z-index: 99;
     transition: cubic-bezier(.17,.67,.83,.67);
 
 }
